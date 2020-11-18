@@ -1,0 +1,128 @@
+.container {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  //width: 700px;
+}
+
+.slider {
+  position: relative;
+  //  width: 700px;
+
+  height: 200px;
+}
+
+.slider {
+  position: relative;
+  height: 200px;
+
+  &__window {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &__list {
+    position: relative;
+    height: 100%;
+  }
+
+  &__list_transition_disabled {
+    transition: none !important;
+  }
+
+  &__button-prev {
+    left: -35px;
+    position: absolute;
+    display: block;
+    top: 50%;
+
+    &::before {
+      content: '<';
+    }
+  }
+
+
+  &__button-next {
+    right: -35px;
+    position: absolute;
+    display: block;
+    top: 50%;
+
+    &::before {
+      content: '>';
+    }
+  }
+
+  &__dot-list {
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__dot-element {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+
+  }
+
+  &__dot-button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+
+
+  &__dot-button::before {
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+  }
+
+  &__dot-button_active::before {
+    opacity: .75;
+    color: black;
+  }
+
+  &__item {
+    // position: relative;
+    //   width: 350px;
+    box-sizing: border-box;
+    height: 100%;
+    border: 1px solid #dddddd;
+    float: left;
+    text-align: center;
+  }
+}
+
+h1 {
+  color: white;
+}
